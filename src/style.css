@@ -1,0 +1,16 @@
+@import "tailwindcss";
+input[type="checkbox"]::after {
+  content: "✓";
+  color: white;
+  font-size: 0.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+
+input[type="checkbox"]:checked::after {
+  transform: translate(-50%, -50%) scale(1);
+}
