@@ -1,13 +1,13 @@
 {
     "name": "To-Do List",
     "short_name": "ToDo",
-    "start_url": "/",
+    "start_url": "/Todo-list-app-pwa/",
     "display": "standalone",
     "description": "یه اپلیکیشن To-Do List ساده و زیبا - طراحی‌شده توسط Aliomidi",
     "orientation": "portrait",
     "background_color": "#1E3A8A",
     "theme_color": "#7DD3FC",
-    "scope": "/",
+    "scope": "/Todo-list-app-pwa/",
     
     "icons": [
       {

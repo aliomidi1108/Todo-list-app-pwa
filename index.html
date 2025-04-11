@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/style.css">
-  <link rel="manifest" href="/manifest.webmanifest" />
-<link rel="icon" type="image/png" href="./public/favicon.png">
+  <link rel="manifest" href="/Todo-list-app-pwa/manifest.json">
+  <link rel="icon" type="image/png" href="./public/favicon.png">
 
 
   <title>Todo-list-app</title>
@@ -49,6 +49,10 @@
     
     <script type="module" src="/src/main.js"></script>
 
-
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/Todo-list-app-pwa/sw.js', { scope: '/Todo-list-app-pwa/' });
+      }
+    </script>
   </body>
 </html>
