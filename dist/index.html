@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/Todo-list-app-pwa/manifest.json">
+  <link rel="icon" type="image/png" href="/Todo-list-app-pwa/assets/favicon-BzIPnhrU.png">
+
+
+  <title>Todo-list-app</title>
+  <script type="module" crossorigin src="/Todo-list-app-pwa/assets/index-Cgr9ZkUd.js"></script>
+  <link rel="stylesheet" crossorigin href="/Todo-list-app-pwa/assets/index-CsC_Q1b7.css">
+<link rel="manifest" href="/Todo-list-app-pwa/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/Todo-list-app-pwa/registerSW.js"></script></head>
+<body
+    class="min-h-screen bg-gradient-to-r from-blue-500 to-cyan-300 flex items-center justify-center"
+  >
+    <div class="bg-white p-4 rounded-lg shadow-lg w-[400px]">
+      <h1 class="text-gray-800 font-bold text-xl text-center mb-4">
+        TO-DO List
+      </h1>
+
+      <div class="relative flex items-center mb-4">
+        <input
+          id="taskInput"
+          class="w-full h-10 rounded-full bg-gray-100 pl-4 pr-12 text-sm outline-none placeholder:text-gray-400"
+          type="text"
+          placeholder="Add your task"
+        />
+        <button
+          id="addButton"
+          class="absolute right-2 bg-orange-500 cursor-pointer text-white text-sm font-semibold rounded-full px-4 py-1 h-8"
+        >
+          Add
+        </button>
+      </div>
+
+      <ul id="todoList" class="space-y-2"></ul>
+
+      <div class="mt-10 flex justify-center">
+        <button
+          id="installButton"
+          class="bg-orange-500 text-white text-sm font-semibold cursor-pointer rounded-full px-4 py-2"
+        >
+          install app
+        </button>
+      </div>
+    </div>
+
+
+    
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/Todo-list-app-pwa/sw.js', { scope: '/Todo-list-app-pwa/' });
+      }
+    </script>
+  </body>
+</html>
