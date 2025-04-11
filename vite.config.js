@@ -7,6 +7,9 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     VitePWA({
+      registerType: 'autoUpdate',
+      filename: 'sw.js',
+      base: '/Todo-list-app-pwa/',
       manifest: {
         name: 'To-Do List',
         short_name: 'ToDo',
@@ -59,7 +62,6 @@ export default defineConfig({
           },
         ],
       },
-      registerType: 'autoUpdate',
     }),
   ],
 });
